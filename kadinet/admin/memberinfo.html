@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>디지털산업협회</title>
+	<link href="css/admin/admin.css" rel="stylesheet">
+	<link href="boot/css/sb-admin.css" rel="stylesheet">
+	<link href="boot/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="boot/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+	<link href="boot/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+<script>
+	function pageing(page) {
+		document.readFrm.nowPage.value = page;
+		document.readFrm.submit();
+	}
+	
+	function block(value) {
+		document.readFrm.nowPage.value = 10 * (value - 1) + 1;
+		document.readFrm.submit();
+	}
+</script>
+<link rel="stylesheet" type="text/css" href="css/global/global.css">
+<link rel="stylesheet" type="text/css" href="css/main/main.css">
+</head>
+<body id="page-top">
+	<header>
+		<nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+			<a class="navbar-brand mr-1" href="../index.html" style="font-weight:bold;">KADINET</a> 
+			<button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle">
+				<i class="fas fa-bars"></i>
+			</button>
+			<div class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0"></div>
+	
+		</nav>
+	</header>
+	<div id="wrapper">
+		<ul class="sidebar navbar-nav">
+			<li class="nav-item active"><a class="nav-link" href="index.html">
+					<i class="fas fa-fw fa-home"></i> <span>대시보드</span>
+				</a></li>
+			<li class="nav-item dropdown ${show1}"><a class="nav-link dropdown-toggle" href="#"
+					id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="false"
+					aria-expanded="true">
+					<i class="fas fa-fw fa-folder"></i> <span>협회소개</span>
+				</a>
+				<div class="dropdown-menu ${show1}" aria-labelledby="pagesDropdown">
+					<a class="dropdown-item" href="editorView.html">협회장인사</a>
+					<a class="dropdown-item" href="history.html">연혁</a>
+					<a class="dropdown-item" href="member.html">임원소개</a>
+					<a class="dropdown-item" href="editorView.html">조직도</a>
+					<a class="dropdown-item" href="visit.html">오시는길</a>
+				</div></li>
+			<li class="nav-item dropdown ${show2}"><a class="nav-link dropdown-toggle" href="#"
+					id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="false"
+					aria-expanded="false">
+					<i class="fas fa-fw fa-folder"></i> <span>주요사업</span>
+				</a>
+				<div class="dropdown-menu ${show2}" aria-labelledby="pagesDropdown">
+					<h6 class="dropdown-header">주요사업</h6>
+					<a class="dropdown-item" href="editorView.html">경력인증</a>
+					<a class="dropdown-item" href="editorView.html">기업체인증</a>
+					<a class="dropdown-item" href="editorView.html">멘토링</a>
+					<a class="dropdown-item" href="editorView.html">디지털융합산업지원</a>
+					<a class="dropdown-item" href="editorView.html">교육사업</a>
+				</div></li>
+			<li class="nav-item dropdown ${show3}"><a class="nav-link dropdown-toggle" href="#"
+					id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="false"
+					aria-expanded="false">
+					<i class="fas fa-fw fa-folder"></i> <span>알림마당</span>
+				</a>
+				<div class="dropdown-menu ${show3}" aria-labelledby="pagesDropdown">
+					<h6 class="dropdown-header">알림마당</h6>
+					<a class="dropdown-item" href="list.html">공지사항</a>
+					<a class="dropdown-item" href="list.html">보도자료</a>
+					<a class="dropdown-item" href="list.html">정보자료실</a>
+				</div></li>
+			<li class="nav-item dropdown ${show4}"><a class="nav-link dropdown-toggle" href="#"
+					id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="false"
+					aria-expanded="false">
+					<i class="fas fa-fw fa-folder"></i> <span>회원사</span>
+				</a>
+				<div class="dropdown-menu ${show4}" aria-labelledby="pagesDropdown">
+					<h6 class="dropdown-header">회원사</h6>
+					<a class="dropdown-item" href="memberinfo.html">회원사소개</a>
+				</div></li>
+			<li class="nav-item"><a class="nav-link" href="mbrTable.html">
+					<i class="fas fa-user-circle fa-fw"></i> <span>회원관리</span>
+				</a></li>
+		</ul>
+		<div id="content-wrapper">
+			<div class="container-fluid">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item">ADMIN &gt; 회원사소개</li>
+				</ol>
+				<div class="card mb-3">
+					<div class="card-header"></div>
+					<div class="card-body">
+						<div class="mbrinfo_box">
+							<ol>
+								<li>
+									<span class="img"><img
+										style="cursor: pointer;"
+										onclick="location.href='/admin/mbr/edit.do?no=${item.getMbr_no()}'"
+										src="img/main/m_dae.jpg">
+									</span>
+									<b>회원사이름</b>
+									<ul class="mem_data">
+										<li><span>대표이사 : 홍길동</span></li>
+										<li><span>설립일 : 2020.05.08</span></li>
+										<li><span>전화번호 : 010-0505-1234</span></li>
+										<li><span>가입일 : 2020.02.05</span></li>
+									</ul>
+								</li>
+								<li>
+									<span class="img"><img
+										style="cursor: pointer;"
+										onclick="location.href='/admin/mbr/edit.do?no=${item.getMbr_no()}'"
+										src="img/main/m_dae.jpg">
+									</span>
+									<b>회원사이름</b>
+									<ul class="mem_data">
+										<li><span>대표이사 : 홍길동</span></li>
+										<li><span>설립일 : 2020.05.08</span></li>
+										<li><span>전화번호 : 010-0505-1234</span></li>
+										<li><span>가입일 : 2020.02.05</span></li>
+									</ul>
+								</li>
+								<li>
+									<span class="img"><img
+										style="cursor: pointer;"
+										onclick="location.href='/admin/mbr/edit.do?no=${item.getMbr_no()}'"
+										src="img/main/m_dae.jpg">
+									</span>
+									<b>회원사이름</b>
+									<ul class="mem_data">
+										<li><span>대표이사 : 홍길동</span></li>
+										<li><span>설립일 : 2020.05.08</span></li>
+										<li><span>전화번호 : 010-0505-1234</span></li>
+										<li><span>가입일 : 2020.02.05</span></li>
+									</ul>
+								</li>
+								<li>
+									<span class="img"><img
+										style="cursor: pointer;"
+										onclick="location.href='/admin/mbr/edit.do?no=${item.getMbr_no()}'"
+										src="img/main/m_dae.jpg">
+									</span>
+									<b>회원사이름</b>
+									<ul class="mem_data">
+										<li><span>대표이사 : 홍길동</span></li>
+										<li><span>설립일 : 2020.05.08</span></li>
+										<li><span>전화번호 : 010-0505-1234</span></li>
+										<li><span>가입일 : 2020.02.05</span></li>
+									</ul>
+								</li>
+								<li>
+									<span class="img"><img
+										style="cursor: pointer;"
+										onclick="location.href='/admin/mbr/edit.do?no=${item.getMbr_no()}'"
+										src="img/main/m_dae.jpg">
+									</span>
+									<b>회원사이름</b>
+									<ul class="mem_data">
+										<li><span>대표이사 : 홍길동</span></li>
+										<li><span>설립일 : 2020.05.08</span></li>
+										<li><span>전화번호 : 010-0505-1234</span></li>
+										<li><span>가입일 : 2020.02.05</span></li>
+									</ul>
+								</li>
+								<li>
+									<span class="img"><img
+										style="cursor: pointer;"
+										onclick="location.href='/admin/mbr/edit.do?no=${item.getMbr_no()}'"
+										src="img/main/m_dae.jpg">
+									</span>
+									<b>회원사이름</b>
+									<ul class="mem_data">
+										<li><span>대표이사 : 홍길동</span></li>
+										<li><span>설립일 : 2020.05.08</span></li>
+										<li><span>전화번호 : 010-0505-1234</span></li>
+										<li><span>가입일 : 2020.02.05</span></li>
+									</ul>
+								</li>
+								
+							</ol>
+						</div>
+						<div class="paginDiv">
+							<c:if test="${totalPage !=0 }">
+								<c:if test="${nowBlock > 1 }">
+									<a href="javascript:block('${nowBlock - 1 }')"> <span
+										class="paging">&lt;</span>
+									</a>
+								</c:if>
+								<c:forEach var="i" begin="${pageStart}" end="${pageEnd}">
+									<a href="javascript:pageing('${i}')"> <span class="paging">1</span>
+									</a>
+								</c:forEach>
+								<c:if test="${totalBlock > nowBlock }">
+									<a href="javascript:block('${nowBlock + 1 }')"> <span
+										class="paging">&gt;</span>
+									</a>
+								</c:if>
+							</c:if>
+						</div>
+						<div>
+							<form name="readFrm" method="get">
+								<input type="hidden" name="nowPage" value="${nowPage}">
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="card-footer small text-muted">
+					<button type="button" class="btn btn-primary membtn"
+						onclick="location.href='/admin/mbr/edit.do'">등록</button>
+				</div>
+			</div>
+							<footer class="sticky-footer">
+					<div class="container my-auto">
+						<div class="copyright text-center my-auto">
+							<span class="ftcopy">Copyright &copy; 2018 ASk. All Rights reserved.</span>
+						</div>
+					</div>
+				</footer>
+		</div>
+	</div>
+		<div class="script">
+			<script src="js/admin/admin.js"></script>
+			<script src="boot/vendor/jquery/jquery.min.js"></script>
+			<script src="boot/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+			<script src="boot/vendor/jquery-easing/jquery.easing.min.js"></script>
+			<script src="boot/vendor/chart.js/Chart.min.js"></script>
+			<script src="boot/vendor/datatables/jquery.dataTables.js"></script>
+			<script src="boot/vendor/datatables/dataTables.bootstrap4.js"></script>
+			<script src="boot/js/sb-admin.min.js"></script>
+			<script src="boot/js/demo/datatables-demo.js"></script>
+		</div>
+</body>
+</html>

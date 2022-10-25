@@ -1,0 +1,923 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta property="og:url" content="jinjooo.dothome.co.kr/MMCA">
+        <meta property="og:title" content="국립현대미술관 리뉴얼 홈페이지">
+        <meta property="og:type" content="mobileweb">
+        <meta property="og:image" content="logo.png">
+        <meta property="og:description" content="국립현대미술관 모바일 홈페이지를 리뉴얼 한 사이트 입니다.">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=2, minimum-scale=1, user-scalable=yes, shrink-to-fit=no">
+        <title>국립현대미술관:MMCA</title>
+        <link rel="shortcut icon" href="mmca_favicon.ico">
+        <link rel="icon" href="mmca_favicon.ico">
+        <!--css-->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css">
+        <link type="text/css" rel="stylesheet" href="css/normalize.css" />
+        <link type="text/css" rel="stylesheet" href="css/style.css" />
+        <!--jquery-->
+        <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <!--google map-->
+        <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+        <script src="ui/jquery.ui.map.js"></script>
+        <script src="ui/jquery.ui.map.extensions.js"></script>
+        <!--slick slide js-->
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="js/main.js"></script>
+    </head>
+
+    <body>
+        <!--언어설정-->
+        <section data-role="page" id="language">
+            <h2 class="hidden">언어설정</h2>
+            <div class="content_wrap">
+                <div class="logo">
+                    <img src="images/m-mmca-logo.png" alt="국립현대미술관">
+                    <p>국립현대미술관</p>
+                </div>
+                <div class="lang_btn">
+                    <a href="#gallery" id="kr_btn" class="round_box" data-transition="slide">한국어</a>
+                    <a href="#gallery" id="en_btn" class="round_box" data-transition="slide">English</a>
+                </div>
+            </div>
+        </section>
+
+        <!--전시관목록-->
+        <section data-role="page" id="gallery">
+            <h2 class="hidden">전시관 목록</h2>
+            <div data-role="header" id="header">
+                <h1 class="logo">
+                    <a href="#language" data-transition="slide" data-direction="reverse">
+                        <img src="images/m-mmca-logo.png" alt="국립현대미술관">
+                    </a>
+                </h1>
+            </div>
+            <div data-role="content" class="content_wrap">
+                <ul>
+                    <li>
+                        <a href="#exhibition" data-transition="slide">
+                            <div class="g_txt">
+                                <p>전통과 현대의 공존</p>
+                                <h3>서울</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#exhibition" data-transition="slide">
+                            <div class="g_txt">
+                                <p>한국현대미술사의 중심</p>
+                                <h3>과천</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#exhibition" data-transition="slide">
+                            <div class="g_txt">
+                                <p>역사가 흐르는 궁궐 속 미술관</p>
+                                <h3>덕수궁</h3>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!--전시목록-->
+        <section data-role="page" id="exhibition">
+            <h2 class="hidden">전시목록</h2>
+            <div data-role="header" id="header">
+                <a href="#gallery" class="head_txt" data-transition="slide" data-direction="reverse">서울관</a>
+            </div>
+            <div class="nav_black"></div>
+            <nav>
+                <div class="content_wrap">
+                    <ul class="main_menu">
+                        <li><a href="#notice" data-transition="slide">공지사항</a></li>
+                        <li><a href="#setting" data-transition="slide">설정</a></li>
+                    </ul>
+                    <div class="nav_bottom">
+                        <a href="#language" class="round_box" data-transition="slide" data-direction="reverse">한국어</a>
+                        <ul class="sns">
+                            <li><a href="#" class="ir_pm">facebook</a></li>
+                            <li><a href="#" class="ir_pm">instagram</a></li>
+                            <li><a href="#" class="ir_pm">youtube</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div data-role="content" class="content_wrap">
+                <div class="search_wrap">
+                    <input type="text" class="search" placeholder="작품 번호 또는 제목을 입력하세요">
+                    <a href="#" class="ir_pm search_btn">검색</a>
+                </div>
+                <div class="tab_menu">
+                    <a href="#">지난 전시</a>
+                    <a href="#">현재 전시</a>
+                    <a href="#">예정 전시</a>
+                </div>
+                <!--지난전시-->
+                <ul class="tab_item">
+                    <li>
+                        <a href="#detail" class="detail_img" data-transition="slide">
+                            <img src="images/list1_3.jpg" alt="이승택 - 거꾸로, 비미술">
+                        </a>
+                        <div class="exhibition_txt">
+                            <h3>이승택 - 거꾸로, 비미술</h3>
+                            <p>서울 2전시실</p>
+                            <p>2020.11.25 - 2021.03.28</p>
+                        </div>
+                        <div class="detail_ico">
+                            <a href="#" class="ir_pm like">like</a>
+                            <a href="#" class="ir_pm mic">mic</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#detail" class="detail_img" data-transition="slide">
+                            <img src="images/list1_4.jpg" alt="올해의 작가상">
+                        </a>
+                        <div class="e_txt">
+                            <h3>올해의 작가상</h3>
+                            <p>서울 2전시실</p>
+                            <p>2021.04.30 - 2021.08.22</p>
+                        </div>
+                        <div class="detail_ico">
+                            <a href="#" class="ir_pm like">like</a>
+                            <a href="#" class="ir_pm mic">mic</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#detail" class="detail_img" data-transition="slide">
+                            <img src="images/list1_1.jpg" alt="모두를 위한 미술관, 개를 위한 미술관">
+                        </a>
+                        <div class="exhibition_txt">
+                            <h3>모두를 위한 미술관, 개를 위한 미술관</h3>
+                            <p>서울 2전시실</p>
+                            <p>2021.04.30 - 2021.08.22</p>
+                        </div>
+                        <div class="detail_ico">
+                            <a href="#" class="ir_pm like">like</a>
+                            <a href="#" class="ir_pm mic">mic</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#detail" class="detail_img" data-transition="slide">
+                            <img src="images/list1_2.jpg" alt="MMCA 소장품 하이라이트 2020+">
+                        </a>
+                        <div class="exhibition_txt">
+                            <h3>MMCA 소장품 하이라이트 2020+</h3>
+                            <p>서울 2전시실</p>
+                            <p>2021.04.30 - 2021.08.22</p>
+                        </div>
+                        <div class="detail_ico">
+                            <a href="#" class="ir_pm like">like</a>
+                            <a href="#" class="ir_pm mic">mic</a>
+                        </div>
+                    </li>
+                </ul>
+                <!--현재전시-->
+                <ul class="tab_item">
+                    <li>
+                        <a href="#detail" class="detail_img" data-transition="slide">
+                            <img src="images/list2_1.jpg" alt="황재형: 회천回天">
+                        </a>
+                        <div class="exhibition_txt">
+                            <h3>황재형: 회천回天</h3>
+                            <p>서울 2전시실</p>
+                            <p>2021.04.30 - 2021.08.22</p>
+                        </div>
+                        <div class="detail_ico">
+                            <a href="#" class="ir_pm like">like</a>
+                            <a href="#" class="ir_pm mic">mic</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#detail" class="detail_img" data-transition="slide">
+                            <img src="images/list2_2.jpg" alt="움직임을 만드는 움직임">
+                        </a>
+                        <div class="exhibition_txt">
+                            <h3>움직임을 만드는 움직임</h3>
+                            <p>서울 2전시실</p>
+                            <p>2021.04.30 - 2021.08.22</p>
+                        </div>
+                        <div class="detail_ico">
+                            <a href="#" class="ir_pm like">like</a>
+                            <a href="#" class="ir_pm mic">mic</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#detail" class="detail_img" data-transition="slide">
+                            <img src="images/list2_3.jpg" alt="정상화">
+                        </a>
+                        <div class="exhibition_txt">
+                            <h3>정상화</h3>
+                            <p>서울 2전시실</p>
+                            <p>2021.04.30 - 2021.08.22</p>
+                        </div>
+                        <div class="detail_ico">
+                            <a href="#" class="ir_pm like">like</a>
+                            <a href="#" class="ir_pm mic">mic</a>
+                        </div>
+                    </li>
+                </ul>
+                <!--예정전시-->
+                <ul class="tab_item">
+                    <li>
+                        <a href="#detail" class="detail_img" data-transition="slide">
+                            <img src="images/list3_1.jpg" alt="DMZ 극장">
+                        </a>
+                        <div class="exhibition_txt">
+                            <h3>DMZ 극장</h3>
+                            <p>서울 8전시실</p>
+                            <p>2021.08.20 - 2021.10.03</p>
+                        </div>
+                        <div class="detail_ico">
+                            <a href="#" class="ir_pm like">like</a>
+                            <a href="#" class="ir_pm mic">mic</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div data-role="footer" id="footer" data-tap-toggle="false" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li class="on"><a href="#exhibition" data-icon="fexhibition" data-iconpos="notext" data-transition="slide"></a></li>
+                        <li><a href="#map" data-icon="fmap" data-iconpos="notext" data-transition="slide"></a></li>
+                        <li><a href="#mypage" data-icon="flike" data-iconpos="notext" data-transition="slide"></a></li>
+                        <li><a href="#info" data-icon="finfo" data-iconpos="notext" data-transition="slide"></a></li>
+                        <li><a href="#" class="setting" data-icon="setting" data-iconpos="notext"></a></li>
+                    </ul>
+                </div> 
+            </div>
+        </section>
+
+        <!--전시상세-->
+        <section data-role="page" id="detail">
+            <h2 class="hidden">전시 상세</h2>
+            <div class="nav_black"></div>
+            <nav>
+                <div class="content_wrap">
+                    <ul class="main_menu">
+                        <li><a href="#notice" data-transition="slide">공지사항</a></li>
+                        <li><a href="#setting" data-transition="slide">설정</a></li>
+                    </ul>
+                    <div class="nav_bottom">
+                        <a href="#language" class="round_box" data-transition="slide" data-direction="reverse">한국어</a>
+                        <ul class="sns">
+                            <li><a href="#" class="ir_pm">facebook</a></li>
+                            <li><a href="#" class="ir_pm">instagram</a></li>
+                            <li><a href="#" class="ir_pm">youtube</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div id="slide">
+                <div class="slide_item">
+                    <a href="#">
+                        <img src="images/detail1.jpg" alt="<황지330>, 1981">
+                        <a href="#" class="ir_pm like">like</a>
+                        <p>&lt;황지330&gt;, 1981</p>
+                    </a>
+                </div>
+                <div class="slide_item">
+                    <a href="#">
+                        <img src="images/detail2.jpg" alt="<작은 탄천의 노을>, 2008">
+                        <a href="#" class="ir_pm like">like</a>
+                        <p>&lt;작은 탄천의 노을&gt;, 2008</p>
+                    </a>
+                </div>
+                <div class="slide_item">
+                    <a href="#">
+                        <img src="images/detail3.jpg" alt="<어머니>, 2005">
+                        <a href="#" class="ir_pm like">like</a>
+                        <p>&lt;어머니&gt;, 2005</p>
+                    </a>
+                </div>
+            </div>
+            <div class="detail_txt">
+                <div class="content_wrap">
+                    <div class="touch_box">
+                        <p>서울 2전시실</p>
+                        <h3>황재형: 회천回天</h3>
+                        <p>2021.04.30 - 2021.08.22</p>
+                        <a href="#docent" class="docent"><div class="ir_pm mic">mic</div>온라인 미술관</a>
+                        <p>관람료: 무료 | 작가: 황재형</p>
+                    </div>
+                    <div class="select_wrap">
+                        <div id="detail_select" class="select">1.광부와 화가</div>
+                        <ul class="select_list">
+                            <li><a href="#">1.광부와 화가</a></li>
+                            <li><a href="#">2.태백에서 동해로</a></li>
+                            <li><a href="#">3.실재의 얼굴</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="detail_elaborate">
+                        <p>
+                            황재형은 중앙대학교 회화과 복학생들과 함께 1982년에 '임술년, "구만팔천구백구십이"에서'를 결성했다. '임술년'은 형상성이 강한 회화를 선보이며 산업사회의 폐해와
+                            물질주의에 대하여 비판적인 시선을 견지했다. 작가가 '임술년' 활동 중에 그린 〈황지330〉(1981)은 사실주의 기법이 돋보이는 작품으로 갱도 매몰사고로 사망한 광부의
+                            삶을 적나라하게 드러낸다. 이후 작가는 강원도에 정착해 3년간 광부로 일하며 〈목욕(씻을 수 없는)〉(1983), 〈식사〉(1985) 등을 발표한다. 작품 속의 갱도,
+                            선탄부의 광구와 마스크, 광부의 작업복, 때 묻은 전표 등이 현실을 대변했다.
+                            <br/><br/>
+                            황재형은 1980년대 중반에 건강상의 이유로 광부 생활을 그만뒀고, 이후 탄광촌에서의 삶을 구성하는 요소들을 탐색하는 단계로 나아간다. 작가는 탄광촌의 폐품을 오브제로
+                            사용하거나 철망이나 비정형의 합판을 캔버스로 활용하였다. 황재형은 '임술년'의 창립선언문에 쓰인 대로 '예술의 본질'을 찾고자 광부가 되었고, 현실을 형상화하는 방편으로
+                            실생활에서 탈각한 사물을 화면으로 끌어내는 데 몰두했다. 이 시기 황재형에게 현실은 재현을 넘어 물리적 사실성에 기반한 것이었다.
+                        </p>
+                        <p>
+                            대한민국 정부는 서울올림픽 개최에 맞춰 청정에너지 사용을 권장하였고, 1989년 석탄산업합리화 정책을 시행했다. 연탄 소비량이 줄자 국내 최대의 석탄 생산지 태백은 폐광의
+                            광풍에 휩싸였다. 이런 상황에서도 황재형은 1988년 분신자살한 강원탄광 노동자 성완희의 기념사업회 활동에 참여했고, 공동작업실 · 태백마당 · 사랑의 집 운영 및 마을벽화
+                            프로젝트를 진행하였다. 이와 동시에 그는 한국 사회의 압축성장이 야기한 다양한 삶의 흔적을 목격자의 시선으로 그려냈다.
+                            <br/><br/>    
+                            황재형은 "광부의 집이 바로 광부의 모습이고 표정"이라는 말로 인간과 풍경이 서로 연결된다는 점을 강조하였고, 〈백두대간〉(1993~2004)처럼 한 작품을 수년에 걸쳐
+                            완성하면서 대상의 본질을 포착하는 데 집중했다. 더불어 '현실의 형상화'를 위해 흙과 석탄을 질료로 사용한 〈검은 울음〉(1996~2008)이나 〈어머니〉(2005) 등의
+                            작품을 발표했다. '작가가 주관적으로 파악하고 인식한 현실의 객관적인 표현'으로 리얼리즘을 정의했을 때 1990년대에 황재형은 탄광촌에서 대자연으로 이행하는 풍경화 작업을
+                            통해 사실성의 범주를 대상의 내적 차원으로 넓혀나갔다.
+                        </p>
+                        <p>
+                            황재형은 2010년대부터 자신이 뿌리내린 지역을 벗어나 초역사적 풍경과 보편적인 인물상을 그렸고, 1980년대에 천착했던 주제를 머리카락이라는 새로운 재료로 풀어냈다.
+                            화면에는 탄광촌의 광부와 주변 풍경이 재등장하는 한편 세월호 침몰이나 국정농단 사건과 같은 동시대적 이슈가 나타나기도 한다.
+                            <br/><br/>
+                            황재형은 머리카락을 삶이 기록된 필름이자 그 자체로 생명력을 가진 것으로 보았다. 〈드러난 얼굴〉(2017)은 사실성이란 대상의 기운, 즉 정신을 담아내야 한다는 동양
+                            미술의 전통적 개념을 상기시킨다. 그러면서도 머리카락을 재료로 삼은 것은 작가가 1980년대 물질을 이용해 실제적인 현실을 구현하고자 했던 방식과 연결된다. 한편 극사실주의
+                            기법으로 표현한 〈아버지의 자리〉(2011~2013)나 흑연으로 그린 〈알혼섬〉(2016)은 개인과 민족의 역사에 관한 작품이다. 작가는 세월의 흔적을 은퇴한 광부의 주름과
+                            호수의 물결로 표현하여 인물과 풍경의 연결성을 재차 강조한다. 이처럼 황재형은 사실성을 정신과 시간의 개념과 접목하며 탄광촌에서의 삶을 오늘의 이야기로 환기한다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div data-role="footer" id="footer" data-tap-toggle="false" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li class="on"><a href="#exhibition" data-icon="fexhibition" data-iconpos="notext" data-transition="slide"></a></li>
+                        <li><a href="#map" data-icon="fmap" data-iconpos="notext" data-transition="slide"></a></li>
+                        <li><a href="#mypage" data-icon="flike" data-iconpos="notext" data-transition="slide"></a></li>
+                        <li><a href="#info" data-icon="finfo" data-iconpos="notext" data-transition="slide"></a></li>
+                        <li><a href="#" class="setting" data-icon="setting" data-iconpos="notext"></a></li>
+                    </ul>
+                </div> 
+            </div>
+        </section>
+
+        <!--온라인 미술관-->
+        <section data-role="page" id="docent">
+            <h2 class="hidden">온라인 미술관</h2>
+            <div data-role="header" id="header">
+                <p>황재형: 회천回天<p>
+                <a href="#search" class="ir_pm h_search" data-transition="slide">search</a>
+            </div>
+            <div class="nav_black"></div>
+            <nav>
+                <div class="content_wrap">
+                    <ul class="main_menu">
+                        <li><a href="#notice" data-transition="slide">공지사항</a></li>
+                        <li><a href="#setting" data-transition="slide">설정</a></li>
+                    </ul>
+                    <div class="nav_bottom">
+                        <a href="#language" class="round_box" data-transition="slide" data-direction="reverse">한국어</a>
+                        <ul class="sns">
+                            <li><a href="#" class="ir_pm">facebook</a></li>
+                            <li><a href="#" class="ir_pm">instagram</a></li>
+                            <li><a href="#" class="ir_pm">youtube</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div data-role="content" class="content_wrap">
+                <div class="audio_wrap">
+                    <div class="audio_inner">
+                        <div class="detail_img">
+                            <img src="images/list2_1.jpg" alt="황재형: 회천回天">
+                        </div>
+                        <div class="docent_txt">
+                            <p>
+                                황재형 황지 330,<br/><br/>
+                                화면 가득 채운 어느 탄광 노동자의 작업복<br/>
+                                오래입어 헤지고 목 언저리 늘어진 쌍방울 속옷<br/>
+                                닳디닳아 실밥 터직 빛 바랜 곤색 상의<br/>
+                                탄광 노동자 번호는 ‘황지 330’<br/><br/>
+                                출퇴근 카드 유효기간은 1982년 6월 30일<br/>
+                                당당히 정면 바라보는 신분증 속의 고인<br/><br/>
+
+                                누구의 아들일까 누구의 아버지일까<br/>
+                                황재형의 그림을 보노라면 눈물이 납니다. <br/><br/>
+
+                                삶의 진정성과 시대정신을 직시하고<br/>
+                                미술의 역할을 모색하여<br/>
+                                한국적 사실주의 민중미술을 재현한 화가<br/><br/>
+
+                                더 진실한 삶을 살기 위해<br/>
+                                더 진실한 그림을 그리기 위해<br/>
+                                80년대 노동자 삶으로 직접 뛰어든<br/>
+                                진정한 실천가<br/><br/>
+
+                                40여년 태백에 살며<br/>
+                                탄광촌 노동의 삶을 직접 살고 그려온<br/>
+                                광부화가 탄광촌의 화가 황재형<br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="audio-player">
+                        <audio id="myAudio" src="audio/sample.mp3" crossOrigin="anonymous"></audio>
+                        <div class="timeline">
+                            <span class="progress"></span>
+                        </div>
+                        <small class="current"></small>
+                        <small class="length">5:14</small>
+                        <a href="#" class="ir_pm before">prev</a>
+                        <a href="#" class="ir_pm play">play</a>
+                        <a href="#" class="ir_pm after">next</a>
+                    </div>   
+                </div>
+            </div>
+            <div data-role="footer" id="footer" data-tap-toggle="false" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li class="on"><a href="#exhibition" data-icon="fexhibition" data-iconpos="notext" data-transition="slide"></a></li>
+                        <li><a href="#map" data-icon="fmap" data-iconpos="notext" data-transition="slide"></a></li>
+                        <li><a href="#mypage" data-icon="flike" data-iconpos="notext" data-transition="slide"></a></li>
+                        <li><a href="#info" data-icon="finfo" data-iconpos="notext" data-transition="slide"></a></li>
+                        <li><a href="#" class="setting" data-icon="setting" data-iconpos="notext"></a></li>
+                    </ul>
+                </div> 
+            </div>
+        </section>
+
+        <!--전시검색-->
+        <section data-role="page" id="search">
+            <h2 class="hidden">검색</h2>
+            <div data-role="header" id="header">
+                <p>검색<p>
+            </div>
+            <div class="nav_black"></div>
+            <nav>
+                <div class="content_wrap">
+                    <ul class="main_menu">
+                        <li><a href="#notice" data-transition="slide">공지사항</a></li>
+                        <li><a href="#setting" data-transition="slide">설정</a></li>
+                    </ul>
+                    <div class="nav_bottom">
+                        <a href="#language" class="round_box" data-transition="slide" data-direction="reverse">한국어</a>
+                        <ul class="sns">
+                            <li><a href="#" class="ir_pm">facebook</a></li>
+                            <li><a href="#" class="ir_pm">instagram</a></li>
+                            <li><a href="#" class="ir_pm">youtube</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div data-role="content" class="content_wrap">
+                <div class="search_wrap">
+                    <input type="text" class="search" placeholder="작품 번호 또는 제목을 입력하세요">
+                    <a href="#" class="ir_pm search_btn">검색</a>
+                </div>
+                <ul class="tab_item small_img">
+                    <li>
+                        <a href="#detail" class="detail_img" data-transition="slide">
+                            <img src="images/list1_4.jpg" alt="올해의 작가상">
+                        </a>
+                        <div class="exhibition_txt">
+                            <h3>올해의 작가상</h3>
+                            <p>서울 2전시실</p>
+                            <p>2021.04.30 - 2021.08.22</p>
+                        </div>
+                        <div class="detail_ico">
+                            <a href="#" class="ir_pm like">like</a>
+                            <a href="#" class="ir_pm mic">mic</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#detail" class="detail_img" data-transition="slide">
+                            <img src="images/list1_1.jpg" alt="모두를 위한 미술관, 개를 위한 미술관">
+                        </a>
+                        <div class="exhibition_txt">
+                            <h3>모두를 위한 미술관, 개를 위한 미술관</h3>
+                            <p>서울 2전시실</p>
+                            <p>2021.04.30 - 2021.08.22</p>
+                        </div>
+                        <div class="detail_ico">
+                            <a href="#" class="ir_pm like">like</a>
+                            <a href="#" class="ir_pm mic">mic</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#detail" class="detail_img" data-transition="slide">
+                            <img src="images/list1_2.jpg" alt="MMCA 소장품 하이라이트 2020+">
+                        </a>
+                        <div class="exhibition_txt">
+                            <h3>MMCA 소장품 하이라이트 2020+</h3>
+                            <p>서울 2전시실</p>
+                            <p>2021.04.30 - 2021.08.22</p>
+                        </div>
+                        <div class="detail_ico">
+                            <a href="#" class="ir_pm like">like</a>
+                            <a href="#" class="ir_pm mic">mic</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div data-role="footer" id="footer" data-tap-toggle="false" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#exhibition" data-icon="fexhibition" data-iconpos="notext" data-transition="slide"></a></li>
+                        <li><a href="#map" data-icon="fmap" data-iconpos="notext" data-transition="slide"></a></li>
+                        <li><a href="#mypage" data-icon="flike" data-iconpos="notext" data-transition="slide"></a></li>
+                        <li><a href="#info" data-icon="finfo" data-iconpos="notext" data-transition="slide"></a></li>
+                        <li><a href="#" class="setting" data-icon="setting" data-iconpos="notext"></a></li>
+                    </ul>
+                </div> 
+            </div>
+        </section>
+        
+        <!--위치안내-->
+        <section data-role="page" id="map">
+            <h2 class="hidden">위치안내</h2>
+            <div data-role="header" id="header">
+                <p>위치안내<p>
+                <a href="#search" class="ir_pm h_search" data-transition="slide">search</a>
+            </div>
+            <div class="nav_black"></div>
+            <nav>
+                <div class="content_wrap">
+                    <ul class="main_menu">
+                        <li><a href="#notice" data-transition="slide">공지사항</a></li>
+                        <li><a href="#setting" data-transition="slide">설정</a></li>
+                    </ul>
+                    <div class="nav_bottom">
+                        <a href="#language" class="round_box" data-transition="slide" data-direction="reverse">한국어</a>
+                        <ul class="sns">
+                            <li><a href="#" class="ir_pm">facebook</a></li>
+                            <li><a href="#" class="ir_pm">instagram</a></li>
+                            <li><a href="#" class="ir_pm">youtube</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div data-role="content" class="content_wrap">
+                <div class="select_wrap">
+                    <div id="map_select" class="select">서울관</div>
+                    <ul class="select_list">
+                        <li>
+                            <span class="hidden">37.59127600909161</span>
+                            <span class="hidden">126.98138076361896</span>
+                            <a class="first" href="#">서울관</a>
+                        </li>
+                        <li>
+                            <span class="hidden">37.431203432265995</span>
+                            <span class="hidden">127.0199502711646</span>
+                            <a href="#">과천관</a>
+                        </li>
+                        <li>
+                            <span class="hidden">37.566108485511705</span>
+                            <span class="hidden">126.9737029260516</span>
+                            <a href="#">덕수궁</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="map_canvas" class="map rounded"></div>
+            </div>
+            <div data-role="footer" id="footer" data-tap-toggle="false" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#exhibition" data-icon="fexhibition" data-iconpos="notext" data-transition="slide"></a></li>
+                        <li class="on"><a href="#map" data-icon="fmap" data-iconpos="notext" data-transition="slide"></a></li>
+                        <li><a href="#mypage" data-icon="flike" data-iconpos="notext" data-transition="slide"></a></li>
+                        <li><a href="#info" data-icon="finfo" data-iconpos="notext" data-transition="slide"></a></li>
+                        <li><a href="#" class="setting" data-icon="setting" data-iconpos="notext"></a></li>
+                    </ul>
+                </div> 
+            </div>
+        </section>
+
+        <!--관람안내-->
+        <section data-role="page" id="info">
+            <h2 class="hidden">관람안내</h2>
+            <div data-role="header" id="header">
+                <p>관람안내<p>
+                <a href="#search" class="ir_pm h_search" data-transition="slide">search</a>
+            </div>
+            <div class="nav_black"></div>
+            <nav>
+                <div class="content_wrap">
+                    <ul class="main_menu">
+                        <li><a href="#notice" data-transition="slide">공지사항</a></li>
+                        <li><a href="#setting" data-transition="slide">설정</a></li>
+                    </ul>
+                    <div class="nav_bottom">
+                        <a href="#language" class="round_box" data-transition="slide" data-direction="reverse">한국어</a>
+                        <ul class="sns">
+                            <li><a href="#" class="ir_pm">facebook</a></li>
+                            <li><a href="#" class="ir_pm">instagram</a></li>
+                            <li><a href="#" class="ir_pm">youtube</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div data-role="content" class="content_wrap">
+                <div class="tab_menu">
+                    <a href="#">운영안내</a>
+                    <a href="#">편의시설</a>
+                </div>
+                <div class="tab_item guide">
+                    <ul>
+                        <li>
+                            운영시간<br/>
+                            10시~18시(수,토 21시) / 월요일 휴관
+                        </li>
+                        <li>
+                            관람료<br/>
+                            코로나19 확산 예방 및 관람객 안전을 위하여, 당분간 단체 예약을 받지 않습니다.
+                            <br/>(단체예약 재개 추후 공지)
+                        </li>
+                        <li>
+                            대표전화<br/>
+                            서울관 | 02-3701-9500<br/>
+                            과천관 | 02-2188-6000<br/>
+                            덕수궁 | 02-2022-0600<br/>
+                            청주관 | 043-261-1400<br/>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab_item amenity">
+                    <li>
+                        <div class="detail_img">
+                            <div class="up_txt">
+                                <h3>아트존(Art Zone)</h3>
+                                <p>
+                                    MI, 전시, 교육 등과 연계된<br/>
+                                    다양한 아트상품을 선보입니다.
+                                </p>
+                            </div>
+                        </div>
+                        <ul class="exhibition_txt">
+                            <li>위치: 로비 1층 3개 구역</li>
+                            <li>문의전화: 02-3701-9870~1</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="detail_img">
+                            <div class="up_txt">
+                                <h3>미술책방(Art Book)</h3>
+                                <p>
+                                    각종 전시도록과 국내/외 다양한<br/>
+                                    예술 서적을 만나볼 수 있습니다.
+                                </p>
+                            </div>
+                        </div>
+                        <ul class="exhibition_txt">
+                            <li>위치: 로비 1층 1개 구역</li>
+                            <li>문의전화: 02-3701-9872</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="detail_img">
+                            <div class="up_txt">
+                                <h3>티하우스 오설록<br/>
+                                    (Tea House Osulloc)</h3>
+                                <p>
+                                    아름다운 삼청동 길이 보이는<br/>
+                                    탁 트인 전망의 차 문화 공간입니다.
+                                </p>
+                            </div>
+                        </div>
+                        <ul class="exhibition_txt">
+                            <li>위치: 외부마당</li>
+                            <li>문의전화: 02-739-9293</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="detail_img">
+                            <div class="up_txt">
+                                <h3>카페테리아<br/>
+                                    (Terarosa Coffee)</h3>
+                                <p>
+                                    일상 속 여유를 즐기러 온 이들에게<br/>
+                                    편안한 휴식을 제공합니다.
+                                </p>
+                            </div>
+                        </div>
+                        <ul class="exhibition_txt">
+                            <li>위치: 전시동 1층 로비 옆</li>
+                            <li>문의전화: 033-648-2760</li>
+                        </ul>
+                    </li>
+                </div>
+            </div>
+            <div data-role="footer" id="footer" data-tap-toggle="false" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#exhibition" data-icon="fexhibition" data-iconpos="notext" data-transition="slide"></a></li>
+                        <li><a href="#map" data-icon="fmap" data-iconpos="notext" data-transition="slide"></a></li>
+                        <li><a href="#mypage" data-icon="flike" data-iconpos="notext" data-transition="slide"></a></li>
+                        <li class="on"><a href="#info" data-icon="finfo" data-iconpos="notext" data-transition="slide"></a></li>
+                        <li><a href="#" class="setting" data-icon="setting" data-iconpos="notext"></a></li>
+                    </ul>
+                </div> 
+            </div>
+        </section>
+
+        <!--마이페이지-->
+        <section data-role="page" id="mypage">
+            <h2 class="hidden">마이페이지</h2>
+            <div data-role="header" id="header">
+                <p>마이페이지<p>
+                <a href="#search" class="ir_pm h_search" data-transition="slide">search</a>
+            </div>
+            <div class="nav_black"></div>
+            <nav>
+                <div class="content_wrap">
+                    <ul class="main_menu">
+                        <li><a href="#notice" data-transition="slide">공지사항</a></li>
+                        <li><a href="#setting" data-transition="slide">설정</a></li>
+                    </ul>
+                    <div class="nav_bottom">
+                        <a href="#language" class="round_box" data-transition="slide" data-direction="reverse">한국어</a>
+                        <ul class="sns">
+                            <li><a href="#" class="ir_pm">facebook</a></li>
+                            <li><a href="#" class="ir_pm">instagram</a></li>
+                            <li><a href="#" class="ir_pm">youtube</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div data-role="content" class="content_wrap">
+                <div class="tab_menu">
+                    <a href="#">좋아한 전시</a>
+                    <a href="#">좋아한 작품</a>
+                </div>
+                <ul class="tab_item small_img">
+                    <li>
+                        <a href="#detail" class="detail_img" data-transition="slide">
+                            <img src="images/list1_3.jpg" alt="이승택 - 거꾸로, 비미술">
+                        </a>
+                        <div class="exhibition_txt">
+                            <h3>이승택 - 거꾸로, 비미술</h3>
+                            <p>서울 2전시실</p>
+                            <p>2020.11.25 - 2021.03.28</p>
+                        </div>
+                        <div class="detail_ico">
+                            <a href="#" class="ir_pm like">like</a>
+                            <a href="#" class="ir_pm mic">mic</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#detail" class="detail_img" data-transition="slide">
+                            <img src="images/list1_4.jpg" alt="올해의 작가상">
+                        </a>
+                        <div class="exhibition_txt">
+                            <h3>올해의 작가상</h3>
+                            <p>서울 2전시실</p>
+                            <p>2021.04.30 - 2021.08.22</p>
+                        </div>
+                        <div class="detail_ico">
+                            <a href="#" class="ir_pm like">like</a>
+                            <a href="#" class="ir_pm mic">mic</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#detail" class="detail_img" data-transition="slide">
+                            <img src="images/list1_2.jpg" alt="MMCA 소장품 하이라이트 2020+">
+                        </a>
+                        <div class="exhibition_txt">
+                            <h3>MMCA 소장품 하이라이트 2020+</h3>
+                            <p>서울 2전시실</p>
+                            <p>2021.04.30 - 2021.08.22</p>
+                        </div>
+                        <div class="detail_ico">
+                            <a href="#" class="ir_pm like">like</a>
+                            <a href="#" class="ir_pm mic">mic</a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="tab_item small_img">
+                    <li>
+                        <a href="#detail" class="detail_img" data-transition="slide">
+                            <img src="images/detail.jpg" alt="황자 330">
+                        </a>
+                        <div class="exhibition_txt">
+                            <h3>황자 330</h3>
+                            <p>황재형: 회천回天</p>
+                            <p>서울 2전시실</p>
+                        </div>
+                        <div class="detail_ico">
+                            <a href="#" class="ir_pm like">like</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+             <div data-role="footer" id="footer" data-tap-toggle="false" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#exhibition" data-icon="fexhibition" data-iconpos="notext" data-transition="slide"></a></li>
+                        <li><a href="#map" data-icon="fmap" data-iconpos="notext" data-transition="slide"></a></li>
+                        <li class="on"><a href="#mypage" data-icon="flike" data-iconpos="notext" data-transition="slide"></a></li>
+                        <li><a href="#info" data-icon="finfo" data-iconpos="notext" data-transition="slide"></a></li>
+                        <li><a href="#" class="setting" data-icon="setting" data-iconpos="notext"></a></li>
+                    </ul>
+                </div> 
+            </div>
+        </section>
+
+        <!--공지사항-->
+        <section data-role="page" id="notice">
+            <h2 class="hidden">공지사항</h2>
+            <div data-role="header" id="header">
+                <p>공지사항<p>
+                <a href="#search" class="ir_pm h_search" data-transition="slide">search</a>
+            </div>
+            <div class="nav_black"></div>
+            <nav>
+                <div class="content_wrap">
+                    <ul class="main_menu">
+                        <li><a href="#notice" data-transition="slide">공지사항</a></li>
+                        <li><a href="#setting" data-transition="slide">설정</a></li>
+                    </ul>
+                    <div class="nav_bottom">
+                        <a href="#language" class="round_box" data-transition="slide" data-direction="reverse">한국어</a>
+                        <ul class="sns">
+                            <li><a href="#" class="ir_pm">facebook</a></li>
+                            <li><a href="#" class="ir_pm">instagram</a></li>
+                            <li><a href="#" class="ir_pm">youtube</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div data-role="content" class="content_wrap">
+                <ul class="notice_list">
+                    <li>
+                        <a href="#">
+                            <p>서울관 관람 안내</p>
+                            <p>2021.08.03</p>
+                        </a>
+                        <div class="notice_detail">
+                            <p>
+                                서울관 관람 안내
+                                <br/><br/>
+                                - 운영시간: 10시~18시<br/>
+                                - 관람료: 무료
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>과천관 관람 안내</p>
+                            <p>2021.08.03</p>
+                        </a>
+                        <div class="notice_detail">
+                            <p>
+                                과천관 관람 안내
+                                <br/><br/>
+                                - 운영시간: 10시~18시<br/>
+                                - 관람료: 무료
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>덕수궁관 관람 안내</p>
+                            <p>2021.08.03</p>
+                        </a>
+                        <div class="notice_detail">
+                            <p>
+                                덕수궁관 관람 안내
+                                <br/><br/>
+                                - 운영시간: 10시~18시<br/>
+                                - 관람료: 무료
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>국립현대미술관 앱 소개</p>
+                            <p>2021.08.03</p>
+                        </a>
+                        
+                        <div class="notice_detail">
+                            <p>
+                                본 앱은 전시 안내 앱 입니다.
+                                <br/><br/>
+                                원하시는 전시와 작품을 선택하여
+                                흥미진진한 설명을 들어보세요.
+                                <br/><br/>    
+                                작품 이미지를 투번 터치하면
+                                해설을 함께 읽으실 수 있습니다.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div data-role="footer" id="footer" data-tap-toggle="false" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#exhibition" data-icon="fexhibition" data-iconpos="notext" data-transition="slide"></a></li>
+                        <li><a href="#map" data-icon="fmap" data-iconpos="notext" data-transition="slide"></a></li>
+                        <li><a href="#mypage" data-icon="flike" data-iconpos="notext" data-transition="slide"></a></li>
+                        <li><a href="#info" data-icon="finfo" data-iconpos="notext" data-transition="slide"></a></li>
+                        <li><a href="#" class="setting" data-icon="setting" data-iconpos="notext"></a></li>
+                    </ul>
+                </div> 
+            </div>
+        </section>
+    </body>
+</html>
