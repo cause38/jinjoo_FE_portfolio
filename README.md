@@ -1,2 +1,2 @@
 # jinjoo
-Web publisher Portfolio
+Web publisher & FE Portfolio
